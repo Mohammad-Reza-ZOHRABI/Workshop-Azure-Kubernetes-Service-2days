@@ -37,7 +37,7 @@ IDENTITY_ID=$(az identity create \
 **_Création d'une "Azure Container Registry"_**
 ```
 az acr create \
-  --name "acrlab0010" \
+  --name "acrlabrez" \
   --resource-group "RG-AKS-Lab-10" \
   --sku basic
 ```
@@ -56,7 +56,7 @@ az aks create \
     --vnet-subnet-id $SUBNET_ID \
     --enable-managed-identity \
     --assign-identity $IDENTITY_ID \
-    --attach-acr "acrlab0010" \
+    --attach-acr "acrlabrez" \
     --yes
 ```    
 **_Connexion au cluster AKS_**
